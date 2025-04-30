@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Exercise</title>
+  <style>
+    .cart-button{
+      font-size: 20px;
+      background-color: rgb(255, 216, 20);
+      border: none;
+      border-radius: 30px;
+      padding: 7px 50px;
+    }
+    .request-button{
+      border: none;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      padding: 12px 20px;
+      border-radius: 5px;
+      margin-right: 20px;
+    }
+    .schedule-button{
+      border: none;
+      background-color: rgb(230, 230, 230);
+      color: black;
+      font-weight: bold;
+      padding: 12px 20px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <p><button class="cart-button">Add to Cart</button></p>
+  <p>
+    <button class="request-button">Request now</button>
+    <button class="schedule-button">Schedule for later</button>
+  </p>
+  <p>
+    <button class="js-button check-button" onclick="checkClassFunction();">Test</button>
+  </p>
+  <script>
+    function checkClassFunction(){
+      let state=document.querySelector('.js-button');
+      let res=state.classList.contains('check-button');
+      console.log(res);
+    }
+  </script>
+</body>
+</html>

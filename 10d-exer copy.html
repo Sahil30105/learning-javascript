@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Exercise</title>
+  <style>
+    .gaming-button, .music-button, .tech-button{
+      border: none;
+      background-color: black;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      margin-right: 20px;
+      font-size: 20px;
+    }
+    .is-clicked{
+      border: none;
+      background-color: rgb(230, 230, 230);
+      color: black;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="gaming('gaming-button');" class="gaming-button">Gaming</button>
+  <button onclick="gaming('music-button');" 
+  class="music-button">Music</button>
+  <button onclick="gaming('tech-button');" 
+  class="tech-button">Tech</button>
+  <script>
+
+    function gaming(inputButton){
+      let selbutton=document.querySelector(`.${inputButton}`);
+      if(! selbutton.classList.contains('is-clicked')){
+        turnoffbutton();
+        selbutton.classList.add('is-clicked');
+        
+      }else{
+        selbutton.classList.remove('is-clicked');
+      }
+    }
+    function turnoffbutton(){
+      const previousButton=document.querySelector('.is-clicked');
+      if(previousButton){
+        previousButton.classList.remove('is-clicked');
+      }
+    }
+  </script>
+</body>
+</html>

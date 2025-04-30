@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Exercise</title>
+</head>
+<body>
+  <input class="js-input" onkeyup="showText(event);">
+  <p class="js-para"></p>
+  <script>
+    function showText(event){
+      const name=document.querySelector('.js-input').value;
+      event ? document.querySelector('.js-para').innerHTML=name: null;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Objects</title>
+</head>
+
+<body>
+  <script>
+    /*
+    const product={  //{} -> object
+      name:'socks', // object property and value
+      price:1090
+    };
+    console.log(product);
+    console.log(product.name); //object and its property
+    console.log(product.price);
+
+    product.name="cotton socks"; //change property value
+    console.log(product);
+
+    product.newProperty=true; //add new property
+    console.log(product);
+
+    delete product.newProperty; //delete property
+    console.log(product);
+    */
+    /*
+    const product2={
+      name:'Shirt',
+      'delivery-time' : '1 day',
+      rating:{
+        stars:4.5,
+        count:87
+      },
+      fun: function func1(){
+        console.log('Function inside object');
+      }
+    }
+    console.log(product2);
+    console.log(product2.name);
+    console.log(product2['name']);
+    console.log(product2['delivery-time']);
+
+    console.log(product2.rating.stars);
+    console.log(product2['rating']['count']);
+    product2.fun(); //product2 is object fun is the function inside product2. together called method
+
+    console.log(typeof console.log); //log is a function inside the object console and console.log is a method
+    */
+    /*Javacript object and JSON
+    In JSON all properties and strings must use " "(double quotes). it doesnt support ' '(single quotes)
+    JSON doesnt support functions
+    it is similar to JS objects but with less features
+    why use JSON? JS Object only makes sense javascript only while JSON can be read by every language it is universal
+    JSON used to send data between computers
+    JSON used to store data
+    */
+
+    //const jsonString=JSON.stringify(product2); //js object to JSON
+    //console.log(jsonString);
+    //console.log(JSON.parse(jsonString)); //back to javascript object
+
+    console.log('Hello'.length);
+    console.log('Hello'.toUpperCase());
+    //auto-boxing --> javascript automatically wraps a string into a object like a box thats why string have properties and methods also works with numbers and booleans
+
+    const object1={
+      message:'hello'
+    }; //objects are references pointing to the actual location in the computer memory
+    const object2=object1; //both have same reference pointing to the same memory location
+
+    object1.message='good job'; //object is changed even though it was declared as const. const prevents from changing the reference in the variable but cannot prevent from reaching into reference and changing the objects it is pointing to
+    const object3={
+      message:'good job'
+    };
+    //objects cannot be compared directly
+    console.log(object1===object3); //false because both objects have different references even though same content
+    console.log(object1===object2); //true because both objects have same references and not because of same content
+
+    const object4={
+      message:'good job',
+      price:799
+    };
+    //const message=object4.message;
+    const{ message,price }=object4; //destructing
+    console.log(message);
+    console.log(price);
+
+    const object5={
+      //message:message
+      message, //does the same as above
+      //method: function func1(){
+      //  console.log('method');
+      //}
+      method(){
+        console.log('method');
+      } //no need for function name
+    };
+    console.log(object5);
+    object5.method();
+  </script>
+</body>
+
+</html>

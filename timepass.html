@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <style>
+    .icons {
+      display: inline-grid;
+      grid-row: 4;
+      grid-column: 1;
+      row-gap: 10px;
+    }
+
+    button {
+      border: none;
+      height: 80px;
+      width: 80px;
+      padding: 0px;
+      border-radius: 50%;
+    }
+
+    img,
+    .chrome,
+    .instagram,
+    .youtube,
+    .github {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%
+    }
+  </style>
+</head>
+
+<body>
+  <div class="icons">
+    <div class="chrome">
+      <button onclick="OpenChrome">
+        <a href="www.google.com">
+          <img src="images/chrome.jpeg" alt="Chrome">
+        </a>
+        
+      </button>
+    </div>
+
+
+    <div class="instagram">
+      <button>
+        <img src="images/instagram.jpeg" alt="Instagram">
+      </button>
+    </div>
+
+
+    <div class="youtube">
+      <button>
+        <img src="images/youtube.png" alt="Youtube">
+      </button>
+    </div>
+
+
+    <div class="github">
+      <button>
+        <img id="git" src="images/github.png" alt="Github">
+      </button>
+    </div>
+  </div>
+
+</body>
+
+</html>

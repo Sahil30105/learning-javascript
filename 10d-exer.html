@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Exercise</title>
+  <style>
+    .gaming-button, .music-button, .tech-button{
+      border: none;
+      background-color: black;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      margin-right: 20px;
+      font-size: 20px;
+    }
+    .is-clicked{
+      border: none;
+      background-color: rgb(230, 230, 230);
+      color: black;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="gaming('gaming-button','unselected2','unselected3');" class="gaming-button unselected1">Gaming</button>
+  <button onclick="gaming('music-button','unselected1','unselected3');" 
+  class="music-button unselected2">Music</button>
+  <button onclick="gaming('tech-button','unselected1','unselected2');" 
+  class="tech-button unselected3">Tech</button>
+  <script>
+
+    function gaming(inputButton,unselectedbutton1,unselectedbutton2){
+      let selbutton=document.querySelector(`.${inputButton}`);
+      let unselbutton1=document.querySelector(`.${unselectedbutton1}`);
+      let unselbutton2=document.querySelector(`.${unselectedbutton2}`);
+      if(! selbutton.classList.contains('is-clicked')){
+        selbutton.classList.add('is-clicked');
+      }else{
+        selbutton.classList.remove('is-clicked');
+      }
+
+      if(unselbutton1.classList.contains('is-clicked')){
+          unselbutton1.classList.remove('is-clicked')
+      }
+      if(unselbutton2.classList.contains('is-clicked')){
+        unselbutton2.classList.remove('is-clicked')
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Array sort</title>
+</head>
+
+<body>
+  <script>
+    function sortArray(array) {
+      let i = 0;
+      while (i < array.length - 1) {
+        if (array[i] > array[i + 1]) {
+          [array[i], array[i + 1]] = [array[i + 1], array[i]];
+          i = 0;
+        } else {
+          i++;
+        }
+      }
+      console.log(array);
+    }
+    sortArray([3, 4, 1, 6])
+  </script>
+</body>
+
+</html>

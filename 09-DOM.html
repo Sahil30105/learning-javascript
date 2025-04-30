@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DOM</title>
+</head>
+<body>
+  <button>hello there</button>
+  <button class="js-button">second button</button>
+  <script>
+    /*
+    //DOM combines html elements and javascript
+    console.log(document.title);
+    document.title='changed';
+
+    console.log(document.body);
+    console.log(typeof document.body); //converts html elements to object
+    console.log(document.body.innerHTML); //gives all body content
+    document.body.innerHTML='<button>Good Job</button>'; //can also add html code
+    */
+
+    /*
+    document.body.innerHTML='hello'; //removes everything from the body and puts the 'hello' value
+    document.title='Good Job' //changes the html title content
+    */
+    
+    console.log(document.querySelector('button').innerHTML); //get any element from the page and put it in javascript
+    document.querySelector('button').innerHTML='changed'; //innerHTML can also be used to change element content
+
+    document.querySelector('.js-button').innerHTML='lmao';
+
+    const buttonElement=document.querySelector('.js-button');
+    console.log(buttonElement);
+
+
+  </script>
+</body>
+</html>

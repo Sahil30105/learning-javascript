@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Exercise</title>
+</head>
+<body>
+  <button>9a</button>
+  <button class="second-button" onclick="
+  document.querySelector('.second-button').innerHTML='9b done';
+  ">9b</button>
+
+  <button onclick="showMove('heads');">heads</button>
+  <button onclick="showMove('tails');">tails</button>
+  <p class="js-move"></p>
+
+  <input class="js-input" placeholder="Name"
+  onkeydown="handleOnKeydown(event);">
+  <button onclick="showName();" class="js-submit">Submit</button>
+  <p class="js-display"></p>
+  <script>
+    console.log(document.querySelector('button').innerHTML);
+    
+    function showMove(move){
+        document.querySelector('.js-move').innerHTML=`You chose : ${move}`
+    }
+    
+    function showName(){
+      const name=document.querySelector('.js-input').value;
+      document.querySelector('.js-display').innerHTML=`Your name is ${name.toUpperCase()}`;
+    }
+    function handleOnKeydown(){
+      if(event.key==='Enter'){
+        showName();
+      }
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Exercise</title>
+</head>
+
+<body>
+  <script>
+    function minMax(array) {
+      if (array.length === 0) {
+        console.log('Please put some values in the array.')
+      } else {
+        let min = array[0];
+        let max = array[0];
+        for (let i = 0; i < array.length; i++) {
+          if (min >= array[i]) {
+            min = array[i];
+          } else if (max <= array[i]) {
+            max = array[i];
+          }
+        }
+        console.log('The smallest number is '+min);
+        console.log('The biggest number is '+max);
+      }
+    }
+    minMax([3,4,5])
+
+    function countWords(array){
+        element1=array[0];
+        element2=null;
+      for(let i=0;i<array.length;i++){
+        if(element1!==array[i]){
+          element2=array[i];
+        }
+      }
+      const obj={
+        [element1]:0,
+        [element2]:0
+      }
+      for(let i =0;i<array.length;i++){
+        if(element1===array[i]){
+          obj[element1]++;
+        }else if(element2===array[i]){
+          obj[element2]++;
+        }
+      }
+      console.log(obj);
+    }
+    countWords(['apple','grape','apple','apple','grape','apple']);
+
+    function countWords1(array){
+      const result={};
+      for(let i=0;i<array.length;i++){
+        const word=array[i];
+        if(!result[word]){
+          result[word]=1;
+        }else{
+          result[word]++;
+        }
+      }
+      console.log(result);
+    }
+    countWords1(['apple','grape','apple','apple']);
+  </script>
+</body>
+
+</html>

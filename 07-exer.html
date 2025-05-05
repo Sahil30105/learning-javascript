@@ -7,7 +7,7 @@
 
 <body>
   <script>
-    /*
+    
     function greet(name) {
       if (! name) {
         console.log('Hi There!')
@@ -18,13 +18,13 @@
     greet('Sahil');
     greet('Simon');
     greet();
-    */
-    /*
+    
+    
     function convertToFahrenheit(celsius){
       console.log((celsius*9/5)+32+'F');
     }
     function convertToCelsius(fahrenheit){
-      return console.log((fahrenheit-32)*5/9+'C');
+      console.log((fahrenheit-32)*5/9+'C');
     }
     function convertTemperature(degrees,unit){
       if(unit==='C'){
@@ -35,21 +35,21 @@
     }
     convertTemperature(25,'C');
     convertTemperature(86,'F');
-    */
+    
 
-    function convertLength(length, from, to) {
-      if (from === 'miles' && to === 'km') {
-        console.log(length * 1.6 + ' km');
-      } else if (from === 'km' && to === 'miles') {
-        console.log(length * 0.625 + ' miles');
-      } else if (to === 'ft') {
-        from === 'miles' ? console.log(length * 5280 + ' ft') : console.log(length * 3281 + ' ft');
+    function convertLength1(length, from, to) {
+      if (from === 'miles') {
+        to==='km' ? console.log(length*1.6+'km') : console.log(length*5280+'ft');
+      } else if (from === 'km') {
+        to==='miles' ? console.log(length*0.625+'miles') : console.log(length*3281+'ft');
       } else if(!from==='miles' || 'km' || 'ft') {
         console.log('Invalid unit :'+from);
       }
     }
-
-    convertLength(5, 'lbs', 'lbs');
+    convertLength1(5,'miles','km');
+    convertLength1(5,'miles','ft');
+    convertLength1(5,'km','ft');
+    convertLength1(5, 'lbs', 'lbs');
   </script>
 </body>
 

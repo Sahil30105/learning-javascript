@@ -19,12 +19,14 @@
     product.name="cotton socks"; //change property value
     console.log(product);
 
-    product.newProperty=true; //add new property
+    product.quantity=5; //add new property
     console.log(product);
 
-    delete product.newProperty; //delete property
+    delete product.quantity; //delete property
     console.log(product);
     */
+    
+
     /*
     const product2={
       name:'Shirt',
@@ -47,29 +49,31 @@
     product2.fun(); //product2 is object fun is the function inside product2. together called method
 
     console.log(typeof console.log); //log is a function inside the object console and console.log is a method
-    */
+    
     /*Javacript object and JSON
     In JSON all properties and strings must use " "(double quotes). it doesnt support ' '(single quotes)
     JSON doesnt support functions
     it is similar to JS objects but with less features
-    why use JSON? JS Object only makes sense javascript only while JSON can be read by every language it is universal
+    why use JSON? JS Object only makes sense in javascript only while JSON can be read by every language it is universal
     JSON used to send data between computers
     JSON used to store data
-    */
+    
 
-    //const jsonString=JSON.stringify(product2); //js object to JSON
-    //console.log(jsonString);
-    //console.log(JSON.parse(jsonString)); //back to javascript object
+    const jsonString=JSON.stringify(product2); //js object to JSON
+    console.log(jsonString);
+    console.log(JSON.parse(jsonString)); //back to javascript object
 
     console.log('Hello'.length);
     console.log('Hello'.toUpperCase());
-    //auto-boxing --> javascript automatically wraps a string into a object like a box thats why string have properties and methods also works with numbers and booleans
-
+    
+    //auto-boxing -> javascript automatically wraps a string into a object like a box thats why string have properties and methods also works with numbers and booleans
+    */
+    
     const object1={
       message:'hello'
     }; //objects are references pointing to the actual location in the computer memory
     const object2=object1; //both have same reference pointing to the same memory location
-
+    
     object1.message='good job'; //object is changed even though it was declared as const. const prevents from changing the reference in the variable but cannot prevent from reaching into reference and changing the objects it is pointing to
     const object3={
       message:'good job'
@@ -83,7 +87,7 @@
       price:799
     };
     //const message=object4.message;
-    const{ message,price }=object4; //destructing
+    const{ message,price }=object4; //destructing(the property name must be same i.e object4.message and const{message})
     console.log(message);
     console.log(price);
 

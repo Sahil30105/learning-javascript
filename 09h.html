@@ -4,11 +4,11 @@
   <title>Exercise</title>
 </head>
 <body>
-  <input class="js-input" onkeyup="showText(event);">
+  <input class="js-input" onkeyup="showText(val=document.querySelector('.js-input').value);">
   <p class="js-para"></p>
   <script>
-    function showText(event){
-      const name=document.querySelector('.js-input').value;
+    function showText(val){
+      const name=val;
       event ? document.querySelector('.js-para').innerHTML=name: null;
     }
   </script>

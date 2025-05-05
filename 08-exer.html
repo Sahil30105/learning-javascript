@@ -36,19 +36,19 @@
       price: 4095
     };
     const product2={
-      name:'basketball',
-      price: 4095
+      pname:'basketball',
+      pprice: 4095
     };
     function isSameProduct(product1,product2){
-      return product1.name === product2.name && product1.price === product2.price
+      return product1.name === product2.pname && product1.price === product2.pprice;
     }
     function isSameProduct1(product1,product2){
-      const {name1,price1}=product1;
-      const {name2,price2}=product2; 
-      return name1===name2 && price1===price2;
+      const {name,price}=product1;
+      const {pname,pprice}=product2; 
+      return name===pname && price===pprice;
     }
     console.log(isSameProduct(product1,product2));
-    console.log(isSameProduct(product1,product2));
+    console.log(isSameProduct1(product1,product2));
     console.log('Good Morning'.toLowerCase());
     console.log('test'.repeat(5));
   </script>

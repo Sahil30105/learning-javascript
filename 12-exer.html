@@ -5,11 +5,11 @@
 </head>
 <body>
   
-  <button class="start-button" onclick="changeText()">Start</button>
+  <button class="start-button js-start-button">Start</button>
 
   <br>
 
-  <button onclick="addFunc()">Add to Cart</button>
+  <button class="js-add-to-cart-button">Add to Cart</button>
 
   <p class="text-area"></p>
 
@@ -37,6 +37,17 @@
         document.querySelector(".start-button").innerHTML='Finished';
       },1000);
     }
+
+    document.querySelector('.js-start-button')
+      .addEventListener('click',()=>{
+        changeText();
+      })
+
+    document.querySelector('.js-add-to-cart-button')
+      .addEventListener('click',()=>{
+        addFunc();
+      })  
+    
 
     let timeoutid;
     function addFunc(){

@@ -55,6 +55,30 @@ document.querySelector('.js-scissors-button').addEventListener('click',()=>{
   playGame('scissors');
 });
 
+document.querySelector('.js-auto-play-button').addEventListener('click',()=>{
+  autoPlay();
+});
+
+document.querySelector('.js-reset-button').addEventListener('click',()=>{
+  score.wins=0;
+  score.losses=0;
+  score.ties=0;
+  updateScoreElement();
+  document.querySelector('.js-result').innerHTML='';
+    document.querySelector('.js-moves').innerHTML='';
+  localStorage.removeItem('score');
+});
+
+document.body.addEventListener('keydown',(event)=>{
+  if(event.key==='r'){
+    playGame('rock');
+  } else if(event.key==='p'){
+    playGame('paper');
+  } else if(event.key==='s'){
+    playGame('scissors');
+  }
+});
+
 function playGame(playerMove) {
   const computerMove = pickComputerMove();
   let result = '';

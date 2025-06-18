@@ -16,7 +16,8 @@
         for (let i = 0; i < array.length; i++) {
           if (min >= array[i]) {
             min = array[i];
-          } else if (max <= array[i]) {
+          }
+          if (max <= array[i]) {
             max = array[i];
           }
         }
@@ -24,7 +25,7 @@
         console.log('The biggest number is '+max);
       }
     }
-    minMax([3,4,5])
+    minMax([4,4,4])
 
     function countWords(array){
         element1=array[0];
@@ -61,7 +62,7 @@
       }
       console.log(result);
     }
-    countWords1(['apple','grape','apple','apple']);
+    countWords1(['apple','grape','apple','apple','orange']);
   </script>
 </body>
 

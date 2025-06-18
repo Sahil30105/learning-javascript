@@ -85,7 +85,7 @@
       let cost = Number(inputElement.value);
       let obj = document.querySelector('.js-total-cost');
       if (cost <= 0) {
-        document.querySelector('.js-total-cost').innerHTML = 'Error: cost cannot be less than $0';
+        document.querySelector('.js-total-cost').innerHTML = 'Error: cost cannot be less than or equal to $0';
         obj.classList.add('red-style');
       } else {
         if (cost > 0 && cost < 40) {

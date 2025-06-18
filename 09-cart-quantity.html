@@ -33,8 +33,9 @@
   <button onclick="clearCart();">Reset Cart</button>
 
   <script>
-    let cartQuantity =localStorage.getItem('cartQuantity') || 0;
+    var cartQuantity =parseInt(localStorage.getItem('cartQuantity')) || 0;
     showQuantity();
+    console.log(typeof cartQuantity);
     function updateCartQuantity(num) {
       if (cartQuantity + num > 10) {
         alert('The cart is full');

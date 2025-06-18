@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ADVANCED FUNCTIONS</title>
+</head>
+<body>
+  <button onclick="" class="js-button">Click</button>
+  <script>
+
+    const buttonElement=document.querySelector('.js-button');
+
+    const eventListener=()=>{
+      console.log('click');
+    };
+
+    function eventListener2(){
+      console.log('click2');
+    }
+
+    buttonElement.addEventListener('click',eventListener);
+
+    buttonElement.addEventListener('click',eventListener2);
+
+    buttonElement.removeEventListener('click',eventListener);
+
+    /*
+    function greeting(){
+      console.log("hello");
+    }
+    //Hoisting means able to call a function before creating it
+    greeting();
+
+    const num=2;
+    const function1=function(){
+      console.log('hello 2');
+    }; // function with no name is called anonymous function
+    console.log(function1);
+    console.log(typeof function1);
+    function1();
+
+    const object1={
+      num:2,
+      fun:function(){
+        console.log('hello 3');
+      }
+    };
+    object1.fun();
+
+    function display(param){
+      console.log(param);
+    }
+    display(2);
+
+    function run(param){
+      param();
+    }
+    run(function(){
+      console.log('hello 4');
+    });
+    */
+
+  /*
+   setTimeout(function(){
+    console.log('timeout');
+    console.log('timeout 2');
+   }, 3000);
+   //the above code is asynchronous code(computer doesnt wait for the code before going to the next line it will run the below console.log code)
+   console.log('next line');
+
+   setInterval(() => {
+    console.log('interval');
+   }, 3000);
+   console.log('next line 2');
+   */
+
+   /*
+
+   [
+    'make dinner',
+    'wash dishes',
+    'watch youtube'
+   ].forEach((value, index)=>{
+      if(value==='wash dishes'){
+        return; //works same as continue in loops
+      }
+      console.log(index);
+      console.log(value);
+   });
+
+   const regularFunction=function(param,param2){
+    console.log='hello';
+   }
+
+   const arrowFunction=(param,param2)=>{
+    console.log('hello');
+   }
+   arrowFunction();
+
+   const oneParam=param=>{
+    console.log(param+1);
+   } //if arrow function only has one parameter then round brackets around the parameter are optional eg above function with no round brakcets around param
+   oneParam(2);
+
+   const oneLine=()=>2+3;
+   //example of oneline arrow function is above
+   console.log(oneLine());
+    
+   const obj2={
+    method:()=>{
+      //this is arrow function in object
+    },
+    method(){
+      //this is more preferred in methods also called shorthand property
+    }
+   }
+  */
+  </script>
+</body>
+</html>

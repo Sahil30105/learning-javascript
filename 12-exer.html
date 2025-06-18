@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Exercise</title>
+</head>
+<body>
+  
+  <button class="start-button" onclick="changeText()">Start</button>
+
+  <br>
+
+  <button onclick="addFunc()">Add to Cart</button>
+
+  <p class="text-area"></p>
+
+  <script>
+    //12a,b,c,d,e,f
+    const add=() =>{
+      console.log(2+3);
+    }
+    add();
+    console.log(add);
+
+    function runTwice(fun){
+      fun();
+    }
+
+    runTwice(function(){
+      console.log('12b');
+    });
+
+    runTwice(add);
+
+    function changeText(){
+      document.querySelector(".start-button").innerHTML='Loading';
+      setTimeout(()=>{
+        document.querySelector(".start-button").innerHTML='Finished';
+      },1000);
+    }
+
+    let timeoutid;
+    function addFunc(){
+        document.querySelector(".text-area").innerHTML='Added';
+        clearTimeout(timeoutid);
+        timeoutid=setTimeout(()=>{
+          document.querySelector(".text-area").innerHTML='';
+        },2000);  
+    }
+
+
+    
+  </script>
+</body>
+</html>

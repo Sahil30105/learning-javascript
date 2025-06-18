@@ -8,7 +8,7 @@
 <body>
   <script>
     function minMax(array) {
-      if (array.length === 0) {
+      if (array.length === 0 || array.length ===1) {
         console.log('Please put some values in the array.')
       } else {
         let min = array[0];
@@ -25,7 +25,9 @@
         console.log('The biggest number is '+max);
       }
     }
-    minMax([4,4,4])
+    minMax([1,2,3])
+    minMax([])
+    minMax([5])
 
     function countWords(array){
         element1=array[0];
@@ -63,6 +65,7 @@
       console.log(result);
     }
     countWords1(['apple','grape','apple','apple','orange']);
+
   </script>
 </body>
 
